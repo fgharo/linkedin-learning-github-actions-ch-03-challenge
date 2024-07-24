@@ -1,0 +1,16 @@
+name: Artifacts Challenge
+env:
+  ARTIFACT_NAME: 'my-artifact'
+on: [push]
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout all code in repository.
+      uses: actions/checkout@main
+
+    - name: Upload the artifact
+      run: |
+        echo $ARTIFACT_NAME
+        pwd
