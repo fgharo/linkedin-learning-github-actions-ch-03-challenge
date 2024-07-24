@@ -9,6 +9,8 @@ jobs:
     steps:
     - name: Checkout all code in repository.
       uses: actions/checkout@main
+      with:
+        path: ./${{ env.ARTIFACT_NAME }}
 
     - name: Upload the artifact
       uses: actions/upload-artifact@v1.0.0
